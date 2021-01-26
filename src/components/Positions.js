@@ -1,5 +1,6 @@
-import React, { useReducer, useEffect, useCallback, useMemo } from "react";
+import React, { useReducer, useEffect, useCallback, useMemo, useState } from "react";
 
+import './Positions.css';
 import PositionForm from "./PositionForm/PositionForm";
 import PositionsList from "./PositionsList/PositionsList";
 import Search from "./Search/Search";
@@ -30,6 +31,8 @@ const Positions = () => {
     reqIdentifier,
     clear,
   } = useHttp();
+
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     if (!isLoading && !error && reqIdentifier === "REMOVE_POSITION") {
@@ -80,8 +83,22 @@ const Positions = () => {
     );
   }, [userPositions, removePositionHandler]);
 
+
+  const closeMsg = () => {
+    setShow(false);
+  }
+  let featureMsg = (
+    <div className='message-block' onClick={closeMsg}>
+      <h3 className='message-soon'>More featues and options soon!<span>(click to close)</span></h3>
+    </div>
+  );
+  if(!show) {
+    featureMsg = null;
+  }
+
   return (
     <div className="App" style={{marginBottom: "30px"}}>
+    {featureMsg}
       {error && <ErrorModal onClose={clear}>{error}</ErrorModal>}
 
       <PositionForm onAddPosition={addPositionHandler} loading={isLoading} />

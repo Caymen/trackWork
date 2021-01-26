@@ -1,0 +1,18 @@
+.message-soon {
+  text-align: center;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  color: #3c763d;
+  width: 80%;
+  margin: 25px auto;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+.message-soon span {
+  font-size: 7px;
+}
+
+.message-block {
+  cursor: pointer;
+}
