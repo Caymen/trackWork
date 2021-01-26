@@ -1,0 +1,40 @@
+.position-list {
+  width: 60rem;
+  max-width: 80%;
+  margin: auto;
+}
+
+.position-list h2 {
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.position-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.position-list li {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MuiTableHead-root {
+  background-color: #cccccc;
+}
+
+.list-message {
+  text-align: center;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  color: #8a6d3c;
+}

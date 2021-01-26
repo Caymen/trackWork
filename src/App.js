@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import {AuthContext} from './context/auth-context';
+import Positions from './components/Positions';
+import Auth from './components/Auth';
+
+const App = (props) => {
+  const authContext = useContext(AuthContext);
+
+  let content = <Auth />;
+  if(authContext.isAuth) {
+    content = <Positions />;
+  }
+
+  return <Positions />;
 }
 
 export default App;

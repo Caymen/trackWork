@@ -1,0 +1,50 @@
+.position-form {
+  width: 30rem;
+  margin: 2rem auto;
+  max-width: 80%;
+}
+
+.form-control label,
+.form-control input {
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  font: inherit;
+  padding: 0.1rem 0.25rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-bottom-color: #ff2058;
+}
+
+.position-form__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E8E8E8;
+}
+
+.form-header button {
+  color: #2766D6;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.form-header h2 {
+  padding: 0 15px;
+}
+
+.collapse-css-transition {
+  transition: height 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
